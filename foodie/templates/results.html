@@ -1,0 +1,19 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+        <p>{{msg}}</p>
+        {% endfor %}
+        <div class="article">
+        	<div class="title">
+        		<h3>New Post</h3>
+        	</div>
+    {% endif %}
+{% endwith %}
+
+  <h1>welcome {{ request.form['restaurant_name'] }} </h1>
+  <p>{{ location }}</p>
+{% block content %}
+<article>
+</article>
+{% endblock %}
+

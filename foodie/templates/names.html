@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>trial</title>
+</head>
+<body>
+	<script type="text/javascript">
+  function myFunction(){
+  var$=function(id){
+    return document.getElementById(id);
+  }
+  var comments=$("comments").value;
+  var charcount=comments.length;
+  if(comments == ""){
+    alett("Please enter Something");
+  }
+  else{
+    alert("your comment is" + charcount + "characters:\n\n" + comments)
+  }
+}
+</script>
+	<form action="{{url_for('submit')}}" method="POST">
+            <input type="text" name="Fname" value="" placeholder="First Name"><br/>
+            <input type="text" name="Lname" value="" placeholder="Last Name"><br/>
+            <input type="text" name="Username" value="" placeholder="Username"><br/>
+            <input type="password" name="Password" value="" placeholder="Password"><br/>
+            <input type="submit" name="Submit" onclick="myFunction()">
+        </form>
+</body>
+</html>

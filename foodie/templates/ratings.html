@@ -1,0 +1,9 @@
+<div class="panel-footer">
+  <label for="input-2" class="control-label">My Rating:</label>
+<input id="stars_{{result.id}}" name="input-2" class="rating-loading" data-min="0" data-max="5" data-step="0.1" data-stars="5" data-size="xs"onchange="updateStars('{{result.id}}')" >
+</div>
+   <form action="{{url_for('popular', id=result.id)}}" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete" class="btn btn-danger">
+      </form>
+</div>

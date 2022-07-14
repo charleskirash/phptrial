@@ -1,0 +1,17 @@
+{% extends 'admin.html' %}
+
+{% block content %}
+
+<article class="article-card">
+      <figure class="article-image">
+        <img src="{{ url_for('static', filename='img/nature2jpg') }}" alt="">
+      </figure>
+      <div class="article-content">
+        <a href="#" class="card-category">Visit</a>
+        <h3 class="card-title">View more</h3>
+        <p class="card-excerpt">{{ my_content }}</p>
+      </div>
+    </article>
+
+{% endblock %}
+

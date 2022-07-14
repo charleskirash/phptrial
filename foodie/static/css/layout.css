@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+.links{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/Nature.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding: 0 7%;
+}
+nav{
+  width: 100%;
+  display: inline-block;
+  justify-content: space-between;
+  padding: 20px 0 10px;
+}
+nav ul li{
+  float: right;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+nav ul li a:hover{
+  color: #ff3e3b;
+  transition: .6s;
+}
+
+
+
+@media only screen and (max-width: 700px){
+  nav ul li a{
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+
+
+body{
+  background: url('../img/Misc11.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.login-form{
+  border: 1px solid #1223ee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  transform: translate(-49%,-49%);
+}
+.login-form form{
+  background: #fff;
+  font-size: 22px;
+  opacity: 0.8;
+}
+.title{
+  background: #12331e;
+  height: 60px;
+}
+.title h3{
+  padding: 16px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+  justify-content: center;
+}
+.subtitle{
+  margin: 10px 0;
+  text-align: center;
+  justify-content: center;
+}
+.subtitle input{
+  margin: 5px;
+  border: none;
+  outline: none;
+  padding: 14px;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #555;
+  line-height: 1px;
+}
+.login-btn{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+.login-btn button{
+  width: 100px;
+  padding: 5px;
+  margin: 2px;
+  background: #ff5621;
+  border: none;
+  border-radius: 2px;
+}
+
+/*------------signup part--------------*/
+.signup-form{
+  border: 1px solid #1223ee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 420px;
+  transform: translate(-49%,-49%);
+}
+.signup-form span p{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}

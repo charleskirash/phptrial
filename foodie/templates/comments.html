@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <link rel='stylesheet' type='text/css' media='screen' href="css/comments.css">
+
+</head>
+<body>
+
+<div class="rev-section">
+<h2 class="title">Reviews & Ratings</h2>
+    <form action="reviews" method="POST">
+      <fieldset class="ratings">
+        <input type="radio" name="rating[]" value="1" id="rating1"><label class="far fa-star" for="rating1" name="1 star"></label>
+        <input type="radio" name="rating[]" value="2" id="rating2"><label class="far fa-star" for="rating2" name="2 star"></label>
+        <input type="radio" name="rating[]" value="3" id="rating3"><label class="far fa-star" for="rating3" name="3 star"></label>
+        <input type="radio" name="rating[]" value="4" id="rating4"><label class="far fa-star" for="rating4" name="4 star"></label>
+        <input type="radio" name="rating[]" value="5" id="rating5"><label class="far fa-star" for="rating5" name="5 star"></label>
+      </fieldset><br>
+      <div class="content">
+          <textarea name="comment" id="user_input"></textarea>
+    </div><br>
+    <div class="btn">
+          <button type="submit" onclick="showInput()">Submit</button>
+    </div>
+      
+    </form>
+    <div class="reviews-results">
+      <section>
+        <span id="display"></span>
+      </section>
+    </div>
+    
+  
+</div>
+<script type="text/javascript">
+  function showInput(){
+    document.getElementById('display').innerHTML = document.getElementById("user_input").value;
+  }
+  
+</script>
+
+</body>
+
+<head>
+</html>

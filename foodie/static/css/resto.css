@@ -1,0 +1,121 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+*{
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+body{
+	background-image: url(../img/Colour2.jpg), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+}
+.business-form{
+	font-size: 18px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 5px;
+	width: 450px;
+	height: 100%;
+	max-height: 800px;
+	border: 1px solid #666;
+	transform: translate(-49%,-49%);
+}
+.title h3{
+	padding: 20px;
+	margin: 3px;
+	text-align: center;
+	line-height: 1px;
+	font-size: 24px;
+	font-weight: 500;
+	color: #ccc;
+}
+form{
+	background: #09171B;
+}
+form .sub-heading{
+	padding: 5px;
+	margin: 5px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #555;
+	box-sizing: border-box;
+}
+form .sub-heading .title{
+	display: block;
+	font-size: 12px;
+}
+form .sub-heading input[type='text']{
+	margin: 5px;
+	padding: 5px;
+	width: 70%;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+form .sub-heading input[type='email']{
+	margin: 5px;
+	padding: 5px;
+	width: 70%;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+form .sub-heading input[type='password']{
+	margin: 5px;
+	padding: 5px;
+	width: 70%;
+}
+form .sub-heading input[type='date']{
+	margin: 5px;
+	padding: 5px;
+	width: 30%;
+}
+form .sub-heading input[type='hidden']{
+	margin: 5px;
+	padding: 5px;
+	width: 10%;
+}
+form .sub-heading .title i{
+	cursor: pointer;
+	padding: 5px;
+}
+form .options{
+	font-size: 14px;
+	font-weight: 300;
+	display: flex;
+	flex-wrap: wrap;
+	color: #ccc121;
+	justify-content: flex-start;
+}
+form .btn{
+	display: block;
+	text-align: center;
+	justify-content: center;
+}
+form .btn input{
+	font-size: 16px;
+	padding: 5px;
+	width: 100px;
+	border: 1px solid #555;
+	border-radius: 4px;
+	cursor: pointer;
+	background: #FAFAFA;
+}
+form .btn input:hover{
+	transition: .5s ease;
+	background: #37A439;
+}
+form .footer{
+	font-size: 18px;
+	color: #EDEDED;
+	text-align: center;
+}
+form .footer a{
+	text-decoration: none;
+	color: #fff;
+}
+.footnote{
+	text-align: center;
+	bottom: -12px;
+	padding: 20px;
+}

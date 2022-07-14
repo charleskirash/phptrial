@@ -1,0 +1,59 @@
+.rev-section{
+	box-sizing: border-box;
+	height: 600px;
+	max-height: 800px;
+	width: 800px;
+	max-width: 1000px;
+	font-size: 14px;
+}
+.title{
+	font-weight: 500;
+	font-size: 14px;
+	color: #912224;
+    margin-bottom: .5rem;
+}
+
+/* Ratings widget */
+.ratings{
+    display: inline-block;
+    border: 0;
+    padding: 5px;
+}
+label{
+	float: right;
+}
+input[type='radio']{
+	display: none;
+}
+label:before{
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.1rem;
+	margin: 0;
+}
+input:checked ~ label,
+label:hover, label:hover ~ label{
+	color: #73b100;
+}
+input:checked + label:hover, input:checked ~ label:hover,
+input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label{
+	color: #a6e72d;
+}
+.content{
+	display: inline-block;
+	padding: 5px;
+}
+.content textarea{
+	width: 400px;
+	height: 100px;
+}
+.btn button{
+	font-size: 1rem;
+	color: white;
+	padding: 5px;
+	width: 80px; 
+	height: 40px;
+	background: #37A445;
+	border-radius: 10px;
+}

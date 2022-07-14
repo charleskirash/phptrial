@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Foodie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<body>
+	<div class="header">
+		<nav>
+      <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+			<ul>
+				<li><a href="{{ url_for('homepage') }}">Home</a></li>
+				<li><a href="{{ url_for('listing') }}">Features</a></li>
+				<li><a href="{{ url_for('login') }}">Login</a></li>
+			</ul>
+		</nav>
+		<div class="text-box">
+			<h1>Find your <br>favourite dish</h1>
+			<p>Take a tour with us and find the restaurant of your choice.</p>
+			<button type="button" class="btn"><a href="{{ url_for('signup') }}">Create an Account</a></button>
+		</div>
+		<div class="redirect">
+			<a href="{{ url_for('resto') }}">Business Account</a>
+		</div>
+	</div>
+			
+
+</body>
+</html>

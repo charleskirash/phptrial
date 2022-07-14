@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/resto.css') }}">
+  <title>Business Account</title>
+</head>
+<body>
+
+    <div class="business-form">
+        <form action="{{ url_for('resto')}}" method="POST" enctype="multipart/formdata">
+        <div class="title">
+            <h3>Register Business Account</h3>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fas fa-pencil"></i>Restaurant Name: </span><input type="text" name="restaurant_name" placeholder="Restaurant Name..." required multiple>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fas fa-envelope"></i>Official Email: </span><input type="email" name="email" placeholder="Official Email..." required>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fa-solid fa-utensils"></i> Restaurant Type:<input type="hidden" name="restaurant_type"></span><br>
+                <div class="options">
+                    <input type="checkbox" name="option" id="option1">
+                    <label for="option1">Fast Food</label><br> 
+
+                    <input type="checkbox" name="option" id="option2">
+                    <label for="option2">Cafe</label><br> 
+
+                    <input type="checkbox" name="option" id="option3">
+                    <label for="option3">Family</label><br>
+
+                    <input type="checkbox" name="option" id="option4">
+                    <label for="option4">Healthy</label><br> 
+
+                    <input type="checkbox" name="option" id="option5">
+                    <label for="option5">Dessert</label><br>
+
+                    <input type="checkbox" name="option" id="option6">
+                    <label for="option6">Casual</label><br>
+
+                    <input type="checkbox" name="option" id="option7">
+                    <label for="option7">Fine Dining</label><br>
+
+
+                </div>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fa fa-location-dot"></i>Location: </span><input type="text" name="location" id="location" placeholder="Location" onclick="getLocation()"required>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fa-solid fa-calendar"></i> Date Established: </span><input type="date" name="date" placeholder="Date Established" required>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fa-solid fa-bell-concierge"></i>Services: <input type="hidden" name="services_offered"></span><br>
+                <div class="options">
+                <input type="checkbox" name="option1" id="option1">
+                    <label for="option1">Air Cons</label><br>
+                    <input type="checkbox" name="option2" id="option2">
+                    <label for="option2">Wi-Fi</label><br>
+                    <input type="checkbox" name="option3" id="option3">
+                    <label for="option3">Swimming Pool</label><br>
+                    <input type="checkbox" name="option4" id="option4">
+                    <label for="option4">Gym</label><br>
+                    <input type="checkbox" name="option5" id="option5">
+                    <label for="option5">Accomodation</label><br>                   
+                </div>  
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fas fa-key"></i>Restaurant Password: </span><input type="password" name="password1" placeholder="Restaurant Password..." required>
+        </div>
+        <div class="sub-heading">
+            <span class="title"><i class="fas fa-key"></i>Confirm Password: </span><input type="password" name="password2" placeholder="Confirm Password..." required>
+        </div>
+        
+        <div class="sub-heading">
+            <span class="title"><i></i>Reservation Available: <input type="checkbox" name="reservation"></span>
+        </div>
+        <div class="btn">
+            <input type="submit" name="submit" value="submit">
+        </div>
+        <span class="footer"><p>Already have an account? <a href="{{ url_for('login')}}">Login</a></p></span>
+    </form>
+    </div>
+
+<footer class="footnote">
+    <p>&copy; 2022 Foodie</p>
+</footer>
+    
+
+<script type="text/javascript">
+    var=x
+    document.getElementById('location');
+    function getLocation(){
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else{
+            x.innerHTML = 'Geolocation not supported by browser.';
+        }
+    }
+    function showPosition(position){
+        x.innerHTML = 'Latitude: ' + position.coords.latitude + '<br>Longitude';
+    }
+</script>
+ 
+</body>
+</html>

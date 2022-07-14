@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <title>Foodie admin</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        
+    </head>
+    
+    <body>
+       <input type="checkbox" id="nav-toggle"/>
+        <div class="nav-sidebar">
+            <div class="sidebar-brand">
+                <h2><span class="lab la-untappd"></span> <span>Foodie</span></h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="{{url_for('admin')}}" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                    </li>
+                    <li><a href="{{ url_for('our_page') }}"><span class="las la-users"></span><span>Our Page</span></a>
+                    </li>
+                    <li><a href="{{url_for('posts')}}"><span class="las la-clipboard-list"></span><span>New</span></a>
+                    </li>
+                    <li><a href="#"><span class="las la-phone"></span><span>Contact</span></a>
+                    </li>
+
+                  
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <header>
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Dashboard
+                </h2>
+                
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Search here" />
+                </div>
+                
+                <div class="user-wrapper">
+                    <span class="las la-user-alt"></span>
+                    <div>
+                        <h4>{{ form.restaurant_name.data }}</h4>
+                        <small>Super Admin</small>
+                    </div>
+                </div>
+            </header>            
+        </div>    
+
+
+<div class="content">
+{% block content %}
+
+{% endblock %}
+</div>      
+    </body>
+</html>

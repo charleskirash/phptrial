@@ -1,0 +1,72 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['email'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+  if (!isset($_SESSION['email'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: signup.php');
+  }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+  }
+?>
+<div class="container">
+  <div class="article-container">
+    <article class="article-card">
+      <figure class="article-image">
+        <img src="{{ url_for('static', filename='img/nature3.jpg') }}" alt="">
+      </figure>
+      <div class="article-content">
+        <a href="#" class="card-category">Visit</a>
+        <h3 class="card-title">View more</h3>
+        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <figure class="article-image">
+        <img src="{{ url_for('static', filename='img/nature2.jpg') }}" alt="">
+      </figure>
+      <div class="article-content">
+        <a href="#" class="card-category">Visit</a>
+        <h3 class="card-title">View more</h3>
+        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.it anim id est laborum.</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <figure class="article-image">
+        <img src="{{ url_for('static', filename='img/nature.jpg') }}" alt="">
+      </figure>
+      <div class="article-content">
+        <a href="#" class="card-category">Visit</a>
+        <h3 class="card-title">View more</h3>
+        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <figure class="article-image">
+        <img src="{{ url_for('static', filename='img/wheat2.jpg') }}" alt="">
+      </figure>
+      <div class="article-content">
+        <a href="#" class="card-category">Visit</a>
+        <h3 class="card-title">View more</h3>
+        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+  </div>
+
+</div>
+
+{% endblock %}
