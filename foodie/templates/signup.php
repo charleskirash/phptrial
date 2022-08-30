@@ -1,5 +1,3 @@
-<?php include('../db.php') ?>
-<?php include('../post.php') ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -23,10 +21,10 @@
 </div>
 
 
-<?php include('../error.php') ; ?>
 
   <div class="signup-form">
-        <form action="homepage.php" method="POST">
+        <form action="../post.php" method="POST">
+<?php include('../error.php') ; ?>
         <div class="title">
             <h3>Sign Up</h3>
         </div>

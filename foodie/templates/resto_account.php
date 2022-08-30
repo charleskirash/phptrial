@@ -1,25 +1,25 @@
-<?php include('../post.php') ?>
-<?php include('../db.php') ?>
 <?php include('../checkbox.php') ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="css/resto.css">
   <title>Business Account</title>
 </head>
 <body>
 
     <div class="business-form">
-        <form action="admin.php" method="POST" enctype="multipart/formdata">
+        <form action="../post.php" method="POST" enctype="multipart/formdata">
             <?php include('../error.php') ?>
         <div class="title">
             <h3>Register Business Account</h3>
         </div>
         <div class="sub-heading">
-            <span class="title"><i class="fas fa-pencil"></i>Restaurant Name: </span><input type="text" name="restaurant_name" placeholder="Restaurant Name..." required multiple>
+            <span class="title"><i class="fas fa-pencil"></i>Restaurant Name: </span><input type="text" name="restaurant_name" placeholder="Restaurant Name..." required>
         </div>
         <div class="sub-heading">
             <span class="title"><i class="fas fa-envelope"></i>Official Email: </span><input type="email" name="email" placeholder="Official Email..." required>

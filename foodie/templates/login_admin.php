@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>login</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+
+<div class="login-form">
+        <form action="../_admin.php" method="POST">
+          <?php include('../error.php') ?>
+        <div class="title">
+            <h3>Admin Login</h3>
+        </div>
+            <div class="subtitle">
+                <i class="fas fa-user">
+                <input type="email" name="email" placeholder="Enter username or Email" required>
+                </i>
+            </div>
+            <div class="subtitle">
+                <i class="fas fa-key">
+                <input type="password" name="password" placeholder="Enter password">
+                </i>
+            </div>
+            <div class="login-btn">
+                <button type="submit" name="login_admin">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+</body>
+</html> 

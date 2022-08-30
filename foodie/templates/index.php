@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -22,7 +22,7 @@
 			<button type="button" class="btn"><a href="signup.php">Create an Account</a></button>
 		</div>
 		<div class="redirect">
-			<a href="resto_account.php">Business Account</a>
+			<a href="reg_admin.php">Business Account</a>
 		</div>
 	</div>
 			

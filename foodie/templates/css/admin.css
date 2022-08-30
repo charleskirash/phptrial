@@ -1,9 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 :root{
-    --main-color: #dd2f63;
-    --color-dark: #1d2231;
-    --text-grey: #8390a2;
+   --main-color:#4834d4;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --black:#34495e;
+   --white:#fff;
+   --light-bg:#f5f5f5;
+   --light-color:#999;
+   --brown:#602520;
+   --baige:#BACAE8;
+   --purple:#7053C6;
+   --navyblue:#25336F;
+   --pink:#BF40A4;
+   --green:#349D3F;
+   --dark:#404040;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
+
 *{
     padding: 0;
     margin: 0;
@@ -142,58 +157,56 @@ header label span{
 
 /*----------uploads------------*/
 
-.article-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
-  gap: 2rem;
+.new-post{
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 100px;
+  border: 1px solid var(--navyblue);
+  border-radius: 10px;
+  background: var(--baige);
+  height: 550px;
+  width: 320px;
 }
-.article-image{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.heading{
+  font-size: 20px;
+  text-align: center;
+  color: var(--dark);
 }
-.article-image img{
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px 20px 0 20px;
+.post-editor{
+  margin-left: 20px;
+  padding: 10px;
 }
-.article-image section{
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px 20px 0 20px;
+.post-editor input{
+  border: none;
+  border-bottom: 1px solid var(--dark);
+  height: 20px;
 }
-.article-card{
-
-    margin: auto;
-    background: white;
-  border-radius: 20px;
-  transition: .3s;
+.post-editor input[type='file']{
+  border: none;
+  font-size: 14px;
 }
-.article-card:hover{
-  box-shadow: 0 4px 20px 0 rgba(34,68,123,0.2);
+.flex-btn{
+  text-align: center;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+.flex-btn input{
+  padding: 5px;
+  margin: 15px;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
   cursor: pointer;
 }
-.article-content{
-  padding: 2rem;
+.flex-btn .btn{
+  background: var(--green);
+  margin-left: 1px;
 }
-.article-content .card-category{
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  font-weight: 600;
-  color: #6b82a7;
-  display: block;
-  text-decoration: none;
+.flex-btn .option-btn{
+  background: var(--red);
+  line-height: 2px;
 }
-article-content .card-title{
-  margin: 1rem 0;
-  line-height: 1.5rem;
-  color: #6b82a7;
-  margin: 0;
-}
-
-
-
 
 @media only screen and (max-width: 1200px){
     .nav-sidebar{

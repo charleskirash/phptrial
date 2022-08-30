@@ -1,5 +1,3 @@
-<?php include('../db.php') ?>
-<?php include('../post.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +14,7 @@
     </div>
 
     <div class="login-form">
-        <form action="profile.php" method="POST">
+        <form action="../post.php" method="POST">
             <?php include('../error.php'); ?>
         <div class="title">
             <h3>Login</h3>

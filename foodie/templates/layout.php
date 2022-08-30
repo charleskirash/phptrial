@@ -1,4 +1,3 @@
-<?php include('../server.php') ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -24,7 +23,7 @@
 <body>
 
   <div class="signup-form">
-        <form action="signup.php" method="POST">
+        <form action="../post.php" method="POST">
             <?php include('errors.php') ?>
         <div class="title">
             <h3>Sign Up</h3>

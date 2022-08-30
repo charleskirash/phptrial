@@ -1,5 +1,5 @@
 <?php include('../post.php') ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 
@@ -11,11 +11,11 @@
 </head>
 <body>
 	<nav id="navBar" class="navbar-white">
-      <img src="img/logo.png" class="logo">
+      <img src="img/icon.png" class="logo" style="margin: 5px;">
       <ul class="nav-links">
-        <li><a href="popular.php" class="active">Popular</a></li>
+        <li><a href="search.php" class="active">Popular</a></li>
         <li><a href="listing.php">Featured</a></li>
-        <li><a href="profile.php">Profile</a></li>
+        <li><a href="profile.php">My Profile</a></li>
       <a href="signup.php" class="register-btn">Register Now</a>
       <i class="fas fa-bars" onclick="togglebtn()"></i>
       </ul>
@@ -27,10 +27,10 @@
 	<div class="list-container">
 		<div class="left-col">
 			<p>200+ options</p>
-			<h1>Recommended Restaurants in Nairobi</h1>
+			<h1>Recommended Restaurants</h1>
 			<div class="cafe">
 				<div class="cafe-img">
-					<img src="../img/resto (247).jpg">
+					<img src="img/resto (247).jpg">
 
 				</div>
 				<div class="cafe-info">
@@ -52,7 +52,7 @@
 
 			<div class="cafe">
 				<div class="cafe-img">
-					<img src="../img/resto (94).jpg">
+					<img src="img/resto (94).jpg">
 
 				</div>
 				<div class="cafe-info">
@@ -74,7 +74,7 @@
 
 			<div class="cafe">
 				<div class="cafe-img">
-					<img src="../img/resto (105).jpg">
+					<img src="img/resto (105).jpg">
 
 				</div>
 				<div class="cafe-info">
@@ -96,7 +96,7 @@
 
 			<div class="cafe">
 				<div class="cafe-img">
-					<img src="../img/resto (154).jpg">
+					<img src="img/resto (154).jpg">
 
 				</div>
 				<div class="cafe-info">
@@ -118,7 +118,7 @@
 
 			<div class="cafe">
 				<div class="cafe-img">
-					<img src="../img/resto (173).jpg">
+					<img src="img/resto (173).jpg">
 
 				</div>
 				<div class="cafe-info">
@@ -140,7 +140,7 @@
 
 			<div class="cafe">
 				<div class="cafe-img">
-					<img src="../img/resto (218).jpg">
+					<img src="img/resto (218).jpg">
 
 				</div>
 				<div class="cafe-info">

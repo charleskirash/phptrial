@@ -1,12 +1,21 @@
-<?php include('../post.php') ?>
+<?php 
+if (!isset($_SESSION['resto-id'])) {
+    header('location:resto_account.php');
+}else{
+    session_start();
+    $_SESSION['resto_id'] = $new_admin;
+    header('location:templates/admin.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
         <title>Foodie admin</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="css/admin.cs" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="css/admin.css" />
 
     </head>
     
@@ -20,7 +29,7 @@
                 <ul>
                     <li><a href="admin.php" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
                     </li>
-                    <li><a href="our_page.php"><span class="las la-users"></span><span>Our Page</span></a>
+                    <li><a href="hotel.php"><span class="las la-users"></span><span>Our Page</span></a>
                     </li>
                     <li><a href="posts.php"><span class="las la-clipboard-list"></span><span>New</span></a>
                     </li>
@@ -49,8 +58,8 @@
                 <div class="user-wrapper">
                     <span class="las la-user-alt"></span>
                     <div>
-                        <h4>{{ form.restaurant_name.data }}</h4>
-                        <small>Super Admin</small>
+                        <h4> Welcome </h4>
+                        <small>Super Admin : <?php echo $_SESSION['resto_id'] ;?><br/></small>
                     </div>
                 </div>
             </header>            
@@ -60,4 +69,4 @@
 <div class="content">
 </div>      
     </body>
-</html>
+</html> 

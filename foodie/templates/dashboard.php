@@ -1,43 +1,67 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<!-- <?php 
+include '../db.php';
 
-   </head>
+$fetch_posts = "SELECT * FROM uploads";
+$fetch_image = "SELECT 'image' FROM uploads";
+$result = mysqli_query($con, $fetch_posts);
+if (mysqli_num_rows($result) > 0) {
+  while ($row = mysqli_fetch_assoc($result)) {
+    // echo "Title: " . $row['title'] . '<br>', "Image: " . $row['image'] . '<br>', "Category: " . $row['category'] . '<br>', "Content: " . $row['caption'] . '<br>', "Price: " . $row['price'] . '<br>', "Status: " . $row['status'] . '<br>';
+    
+  }
+}else{
+  echo "0 results";
+}
+
+?> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
       <span class="logo_name">Foodie</span>
     </div>
+
       <ul class="nav-links">
-        <li>
-          <a href="dashboard.php" class="active">
-            <i class="fas fa-clipboard-list"></i>            <span class="icon">Dashboard</span>
+          <li>
+          <a href="homepage.php" class="active">
+            <i class="fa-solid fa-house"></i>
+             <span class="icon">Home</span>
           </a>
         </li>
+
         <li>
-          <a href="#">
-<i class="fas fa-envelope-open"></i>            <span class="icon">Messages</span>
+          <a href="dashboard.php">
+<i class="fa-solid fa-clipboard-list"></i>            <span class="icon">Dashboard</span>
           </a>
         </li>
+
         <li>
-          <a href="#">
-<i class="fa fa-thumbs-up"></i>
-           <span class="icon">Favrorites</span>
+          <a href="new_post.php">
+<i class="fa-solid fa-upload"></i>
+           <span class="icon">Post</span>
           </a>
         </li>
+
         <li>
-          <a href="#">
-<i class="fas fa-cogs"></i>
+          <a href="listing.php">
+<i class="fa-brands fa-pagelines"></i>
+            <span class="icon">Pages</span>
+          </a>
+        </li>        
+
+        <li>
+          <a href="listing.php">
+<i class="fa-solid fa-gears"></i>
             <span class="icon">Settings</span>
           </a>
         </li>
+
         <li class="log_out">
-          <a href="logout.php">
-<i class="fa-sign-out"></i>
+          <a href="includes/user_logout.php">
+<i class="fa-solid fa-arrow-right-from-bracket"></i>
 <span class="icon">Log out</span>
           </a>
         </li>
@@ -61,11 +85,12 @@
 
 <!--highlights-->
 <div class="container-fluid">
-  
-{% block content %} 
+  <div class="status" style="background: <?php if ($fetch_posts['status'] == 'active'){ echo "limegreen"; } {
+    # code...
+  } ?>"></div>
 
 
-{% endblock %}
+<!--    -->
 </div>
 
 <!--highlights end-->

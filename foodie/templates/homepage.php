@@ -1,4 +1,6 @@
-<?php include('../post.php') ?>
+<?php include('../post.php') ?> 
+<?php include('../check.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,7 @@
 <body>
   <div class="header">
     <nav id="navBar">
-      <img src="img/icon.png" class="logo">
+      <img src="img/icon.png" class="logo" style="margin: 5px auto;">
       <ul class="nav-links">
         <li><a href="homepage.php" class="active">Popular</a></li>
         <li><a href="listing.php">Featured</a></li>
@@ -25,7 +27,7 @@
     <div class="container">
       <h1>Find your next restaurant</h1>
       <div class="search-bar">
-        <form action="search" method="POST">
+        <form action="../_search.php" method="POST">
           <div class="location-input">
             <label>Location</label>
             <input type="search" placeholder="Where are you looking to go?" name="location">
@@ -34,7 +36,7 @@
             <label>Restaurant</label>
             <input type="search" placeholder="What are you looking for?" name="restaurant">
           </div>
-          <button type="submit"><i class="fas fa-search"></i></button>
+          <button type="submit" name="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </div>

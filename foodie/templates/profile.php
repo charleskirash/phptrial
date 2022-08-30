@@ -1,4 +1,4 @@
-
+<?php include('../check.php') ?>
 <?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -38,7 +38,7 @@
           </a>
         </li>
         <li class="log_out">
-          <a href="templates/logout.php">
+          <a href="templates/includes/user_logout.php">
 <i class="fa-sign-out"></i>
 <span class="icon">Log out</span>
           </a>
@@ -52,8 +52,8 @@
         <span class="dashboard">Dashboard</span>
       </div>
       <div class="search-box">
-        <form action="templates/search.php" method="GET">
-           <input type="search" placeholder="Search...">
+        <form action="../_search.php" method="POST">
+           <input type="search" placeholder="Search..." name="search_box">
           <i class='bx bx-search' ></i>
         </form>
       </div>
@@ -62,11 +62,7 @@
 <body>
 
 <!--highlights-->
-<div class="content">
 
-    <p>Welcome <strong><?php echo $_SESSION['email']; ?></strong></p>
-    <p><a href="templates/homepage.php?logout='1'" style="color: red;">Logout</a></p>
-</div>
 
 <div class="container-fluid">
   

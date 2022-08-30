@@ -1,57 +1,30 @@
-<?php include('../server.php') ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Post</title>
-
-	<meta charset="utf-8">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="css/posts.css">
+   <title>posts</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
 </head>
 <body>
-  
-  <div class="upload-form">
-  	<form action="posts.php" method="POST" target="#new" enctype="multipart/form-data">
-	<h1>New upload</h1>
 
-		<div class="file-field">
-				<input type="file" name="file" id="file"  multiple>
-		</div>
+   <?php include('dashboard.php')  ?>
 
-		<div class="field-group">
-			<div class="field-label">Title: 
-			<input type="text" name="title" placeholder="Dish Title">	
-			</div>
-		</div>
+   <?php include('new_post.php')  ?>
 
-		<div class="field-group">
-			<div class="field-label">Tags: 
-			<input type="number" name="tags" placeholder="Price Tag"> 	
-			</div>
-		</div>
 
-		<div class="field-group">
-			<div class="field-label">Caption: 
-			<input type="text-box" name="caption" placeholder="Dish Caption">	
-			</div>
-		</div>
 
-		<div class="submit-field">
-			<button type="submit" name="upload">Upload</button>
-		</div>
 
-		
-	</form>
 
-  </div>
-	
-	<div class="new-posts" id="#new">
-		<section >
-			
-		</section>
-		
-	</div>
+<!-- custom js file link  -->
+<script src="js/admin_script.js"></script>
+
 </body>
 </html>

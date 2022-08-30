@@ -12,6 +12,11 @@ if (mysqli_connect_errno()){
     exit();
   }
 
+// REGISTER USER
+
+include 'user_check.php';
+
+
 if (isset($_REQUEST['reg_user'])) {
         $email = stripslashes($_REQUEST['email']);
         $email    = mysqli_real_escape_string($con, $email);
@@ -21,12 +26,20 @@ if (isset($_REQUEST['reg_user'])) {
         $password = mysqli_real_escape_string($con, $password);
         $query    = "INSERT into `users` (username, password, email)
                      VALUES ('$username', '" . md5($password) . "', '$email')";
-        $result   = mysqli_query($con, $query);
-
-
-      } 
+        $_SESSION['user_id'] = $email;
+        try {
+            $result = mysqli_query($con, $query);
+        } catch (Exception $e) {
+            header('location:templates/signup.php?error='.$e->getMessage());
+        }
+            header('location:templates/homepage.php?id='.$_SESSION['user_id']);
+        
+    } 
+ 
 
 //LOGIN USER  
+
+
     if (isset($_POST['login'])){
         $email = stripcslashes($_REQUEST['email']);
         $email = mysqli_real_escape_string($con, $email);
@@ -38,12 +51,19 @@ if (isset($_REQUEST['reg_user'])) {
 
         if (empty($email)) {array_push($errors ,["email is required"]); }
         if (empty($password)) {array_push($errors ,["password is required"]); }
-    
 
-        $result = mysqli_query($con, $query) or die;
+        try {
+              $result = mysqli_query($con, $query) or die;  
+            } catch (Exception $e) {
+                header('location:templates/login.php?error='.$e->getMessage());
+            }
+            header('location:templates/profile.php?id='.$_SESSION['user_id']);
+
+        
         $rows = mysqli_num_rows($result);
+
         if ($rows == 1){
-            $_SESSION['email'] = $email;
+           
         } else {
             echo "<div class='form'>
                   <h3>Incorrect Username/password.</h3><br/>
@@ -67,29 +87,57 @@ if (isset($_REQUEST['reg_resto'])) {
     $service =$_POST['service'];
 
     @$empty  = array();
-    @$reservation = $_POST['reservation']??$empty;
+    @$reservation = $_POST['reservation'] ?? $empty;
     $password = stripslashes($_POST['password']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
+
     
     $finalOption;
     foreach ($option as $opt) {
-        @$finalOption .= $opt . ' ';
-    }
+        @$finalOption .= $opt . '  ';
+            }
+     
 
     $serviceOption;
     foreach ($service as $sv) {
-        @$serviceOption .= $sv . ' ';
+        @$serviceOption .= $sv . '  ';
     }
 
-    @$reservOption ='';
+    @$reservOption;
     foreach ($reservation as $rsv) {
-        @$reservOption .= $rsv . ' ';
+        @$reservOption .= $rsv . '  ';
     }
 
 
     $q = "INSERT into restaurants (Restaurant_name, email, Restaurant_type, location, services, date, reservation,  password) VALUES ('$restaurant', '$email', '$finalOption', '$location', '$serviceOption', '$date', '$reservOption', '" .md5($password). "')";
-    $result = mysqli_query($con, $q) or die;
-      } 
+    $_SESSION['resto_id'] = $email;
+    try {
+        $result = mysqli_query($con, $q) or die;
+    } catch (Exception $e) {
+       header('location:templates/resto_account.php?error='.$e->getMessage());
+       die;
+    }
+        header('location:templates/hotel.php');
+ 
 
 
+// RESTAURANT LOGIN
+
+if (isset($_POST['resto_login'])) {
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    $password = sha1($_POST['password']);
+    $password = filter_var($password, FILTER_SANITIZE_STRING);
+
+    $query = "SELECT email, password FROM restaurants WHERE 'email'= $email AND 'password' = $password";
+
+    try {
+        $result = mysqli_query($con, $result) or die;
+    } catch (Exception $e) {
+        header('location:templates/resto_account.php?error='.$e->getMessage());
+        die;
+    }
+    header('location:templates/dashboard.php');
+}
+}
 ?>
